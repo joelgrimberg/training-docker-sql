@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1050" viewBox="0 0 1800 1050">
+<defs>
+ <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#101827"/><stop offset="1" stop-color="#17243a"/></linearGradient>
+ <linearGradient id="card" x2="0" y2="1"><stop stop-color="#1d2d43"/><stop offset="1" stop-color="#152338"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#050a12" flood-opacity=".35"/></filter>
+ <marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1L11 6 1 11" fill="none" stroke="#73ddd0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+ <style>text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#edf4fc}.muted{fill:#a8b8cc}.tiny{font-size:17px}.small{font-size:19px}.body{font-size:22px}.label{font-size:18px;font-weight:750;letter-spacing:1.3px}.title{font-size:46px;font-weight:760}.head{font-size:25px;font-weight:730}.mono{font-family:SFMono-Regular,Consolas,monospace}</style>
+</defs>
+<rect width="1800" height="1050" fill="url(#bg)"/><circle cx="1670" cy="90" r="240" fill="#1e5b6f" opacity=".13"/><circle cx="80" cy="1000" r="280" fill="#167069" opacity=".08"/>
+<text x="100" y="78" class="label" fill="#79dfd3">CI/CD • VAN CODE NAAR PRODUCTIE</text>
+<text x="100" y="145" class="title">Build → test → goedkeuren → uitrollen</text>
+<text x="100" y="187" class="body muted">Dezelfde geteste applicatie-build gaat, na goedkeuring, naar Artifactory en Kubernetes.</text>
+<!-- pipeline cards -->
+<g filter="url(#shadow)"><rect x="80" y="270" width="265" height="290" rx="22" fill="url(#card)" stroke="#415a76" stroke-width="2"/><rect x="390" y="270" width="300" height="290" rx="22" fill="url(#card)" stroke="#415a76" stroke-width="2"/><rect x="735" y="270" width="265" height="290" rx="22" fill="url(#card)" stroke="#415a76" stroke-width="2"/><rect x="1045" y="270" width="260" height="290" rx="22" fill="url(#card)" stroke="#428b73" stroke-width="2"/><rect x="1350" y="270" width="365" height="290" rx="22" fill="url(#card)" stroke="#4c80a5" stroke-width="2"/></g>
+<!-- source code icon -->
+<rect x="115" y="313" width="68" height="55" rx="10" fill="#263f5c" stroke="#7293b2" stroke-width="2"/><path d="M132 333l-10 8 10 8m31-16 10 8-10 8m-11-18-6 20" fill="none" stroke="#a8d3f1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="115" y="414" class="label" fill="#9cc6e6">01 • BRONCODE</text><text x="115" y="454" class="head">App-code</text><text x="115" y="495" class="small muted">Broncode + configuratie</text><text x="115" y="526" class="small muted">worden klaargezet.</text>
+<path d="M350 415h32" stroke="#73ddd0" stroke-width="4" marker-end="url(#arr)"/>
+<!-- build image icon -->
+<rect x="430" y="314" width="54" height="38" rx="8" fill="#2f4b66" stroke="#83a5c1"/><rect x="439" y="360" width="54" height="38" rx="8" fill="#28566a" stroke="#64adac"/><rect x="448" y="406" width="54" height="38" rx="8" fill="#1d665c" stroke="#6ac8a9"/>
+<text x="520" y="335" class="label" fill="#9cc6e6">02 • BUILD</text><text x="520" y="376" class="head">Image bouwen</text><text x="430" y="479" class="small muted">Code + dependencies</text><text x="430" y="509" class="small muted">+ runtime → image</text><text x="430" y="540" class="tiny" fill="#91dfbd">bijv. app:build-42</text>
+<path d="M696 415h32" stroke="#73ddd0" stroke-width="4" marker-end="url(#arr)"/>
+<!-- test -->
+<circle cx="787" cy="351" r="28" fill="#203f4d" stroke="#64c8bd" stroke-width="2"/><path d="M774 351l9 9 18-20" fill="none" stroke="#8be2d6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="825" y="345" class="label" fill="#9ce1d7">03 • TEST</text><text x="775" y="414" class="head">Testen</text><text x="775" y="459" class="small muted">Test de build zelf</text><text x="775" y="490" class="small muted">tegen de app-eisen.</text><text x="775" y="530" class="tiny" fill="#f0c987">Fout? Stop de pipeline.</text>
+<path d="M1006 415h32" stroke="#73ddd0" stroke-width="4" marker-end="url(#arr)"/>
+<!-- approval -->
+<path d="M1103 327l40 40-40 40-40-40z" fill="#243e35" stroke="#76c999" stroke-width="3"/><path d="M1087 367l11 11 22-25" fill="none" stroke="#a6e4b8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1160" y="350" class="label" fill="#9ce1b5">04 • GATE</text><text x="1160" y="383" class="head">Akkoord?</text><text x="1075" y="455" class="small muted">Review / policy</text><text x="1075" y="486" class="small muted">keurt de build goed.</text><rect x="1075" y="509" width="192" height="34" rx="17" fill="#214b3d"/><text x="1171" y="532" text-anchor="middle" class="tiny" fill="#a6e4b8">JA → label ok</text>
+<path d="M1312 415h32" stroke="#73ddd0" stroke-width="4" marker-end="url(#arr)"/>
+<!-- registry -->
+<path d="M1390 333h64l18 17v61h-82z" fill="#263f5b" stroke="#80a6c6" stroke-width="2"/><path d="M1454 333v19h18M1405 365h50m-50 15h50" fill="none" stroke="#a7c5df" stroke-width="3" stroke-linecap="round"/>
+<text x="1490" y="350" class="label" fill="#9cc6e6">05 • OPSLAAN</text><text x="1490" y="385" class="head">Artifactory</text><text x="1390" y="455" class="small muted">Goedgekeurde image</text><text x="1390" y="486" class="small muted">wordt gepubliceerd.</text><rect x="1390" y="510" width="285" height="34" rx="17" fill="#193d39" stroke="#478577"/><text x="1532" y="533" text-anchor="middle" class="tiny mono" fill="#9ae4d2">app:ok  •  digest</text>
+<!-- deploy line and production -->
+<path d="M1532 563v82H1110v30" fill="none" stroke="#73ddd0" stroke-width="4" marker-end="url(#arr)"/>
+<rect x="735" y="695" width="750" height="205" rx="24" fill="#132d3e" stroke="#477da0" stroke-width="2" filter="url(#shadow)"/>
+<text x="780" y="741" class="label" fill="#9cc6e6">06 • PRODUCTIE</text><text x="780" y="786" class="head">Kubernetes</text><text x="780" y="825" class="small muted">Deployment verwijst naar de goedgekeurde image.</text><text x="780" y="859" class="small muted">Kubernetes haalt die op uit Artifactory en start pods.</text>
+<!-- k8s pods -->
+<g transform="translate(1295 755)"><rect x="0" y="0" width="58" height="81" rx="11" fill="#1e4560" stroke="#72a9c9" stroke-width="2"/><rect x="75" y="0" width="58" height="81" rx="11" fill="#1e4560" stroke="#72a9c9" stroke-width="2"/><rect x="150" y="0" width="58" height="81" rx="11" fill="#1e4560" stroke="#72a9c9" stroke-width="2"/><circle cx="29" cy="26" r="10" fill="#80e1cf"/><circle cx="104" cy="26" r="10" fill="#80e1cf"/><circle cx="179" cy="26" r="10" fill="#80e1cf"/><path d="M15 54h28m32 0h28m32 0h28" stroke="#8ebdd3" stroke-width="4" stroke-linecap="round"/></g>
+<text x="1532" y="791" class="tiny" fill="#9ce1b5">PODS</text><text x="1532" y="819" class="tiny muted">app draait</text>
+<!-- bottom note -->
+<rect x="80" y="945" width="1635" height="64" rx="18" fill="#10383c" stroke="#377e79" stroke-width="2"/><text x="120" y="984" class="small" fill="#b2eee2">Belangrijk: bouw één image en promoot exact diezelfde build na tests — tag ‘ok’ is een label, digest identificeert de image inhoud.</text>
+</svg>
